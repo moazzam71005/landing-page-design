@@ -13,9 +13,9 @@ export default function FAQSection() {
         'Not at all. Quality beats quantity. Creators with 10K highly engaged followers are making more than creators with 500K passive followers. What matters is that your audience trusts you enough to buy from you.',
     },
     {
-      question: 'Does this work if I\'m just starting out?',
+      question: "Does this work if I'm just starting out?",
       answer:
-        'Yes. Many of our most successful creators started with minimal followings (under 5K). The system teaches you how to build AND monetize simultaneously. You don\'t need to wait until you\'re "big enough."',
+        "Yes. Many of our most successful creators started with minimal followings (under 5K). The system teaches you how to build AND monetize simultaneously. You don't need to wait until you're \"big enough.\"",
     },
     {
       question: 'How long until I see results?',
@@ -23,9 +23,9 @@ export default function FAQSection() {
         'Most creators see their first sale within 2-3 weeks. Meaningful income ($1K+/month) typically comes within 60-90 days with consistent effort. Some have gone faster, some slower—it depends on how much traffic you can generate.',
     },
     {
-      question: 'What if my niche isn\'t "typical" for monetization?',
+      question: "What if my niche isn't \"typical\" for monetization?",
       answer:
-        'The framework works for any niche. We have creators in fitness, finance, comedy, education, gaming, lifestyle, and more. As long as people watch and engage, they can buy. We\'ll show you how to identify the right offers for your specific niche.',
+        "The framework works for any niche. We have creators in fitness, finance, comedy, education, gaming, lifestyle, and more. As long as people watch and engage, they can buy. We'll show you how to identify the right offers for your specific niche.",
     },
     {
       question: 'Is this just another affiliate marketing program?',
@@ -38,14 +38,14 @@ export default function FAQSection() {
         'Perfect. The system is platform-agnostic. Whether you\'re on TikTok, YouTube, Instagram, Twitter, or all of them, this works. In fact, leveraging multiple platforms amplifies your results.',
     },
     {
-      question: 'Do you provide ongoing support?',
+      question: "Do you provide ongoing support?",
       answer:
-        'Yes. You get access to our private community, regular group coaching calls, and individual support. You\'re not left alone. We want you to succeed because your success is our success.',
+        "Yes. You get access to our private community, regular group coaching calls, and individual support. You're not left alone. We want you to succeed because your success is our success.",
     },
     {
-      question: 'What if I don\'t think this is right for me?',
+      question: "What if I don't think this is right for me?",
       answer:
-        'We offer a 30-day money-back guarantee. No questions asked. If it\'s not the fit you hoped for, we\'ll refund you completely. We\'re confident in the system, but we also respect that it\'s not for everyone.',
+        "We offer a 30-day money-back guarantee. No questions asked. If it's not the fit you hoped for, we'll refund you completely. We're confident in the system, but we also respect that it's not for everyone.",
     },
   ];
 

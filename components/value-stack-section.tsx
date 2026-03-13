@@ -27,8 +27,8 @@ export default function ValueStackSection() {
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: 'Analytics Dashboard',
-      description: 'Track every dollar earned. See what\'s working, what\'s not, and where to optimize.',
+      title: "Analytics Dashboard",
+      description: "Track every dollar earned. See what's working, what's not, and where to optimize.",
     },
     {
       icon: <Lock className="w-8 h-8" />,

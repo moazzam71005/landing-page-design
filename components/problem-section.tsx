@@ -7,18 +7,18 @@ export default function ProblemSection() {
   const problems = [
     {
       icon: <Users className="w-8 h-8" />,
-      title: 'You Have Views, Not Revenue',
-      description: 'Millions of impressions but your bank account barely moves. The ad revenue game is stacked against creators.',
+      title: "You Have Views, Not Revenue",
+      description: "Millions of impressions but your bank account barely moves. The ad revenue game is stacked against creators.",
     },
     {
       icon: <TrendingDown className="w-8 h-8" />,
-      title: 'Ad Revenue Is Declining',
-      description: 'CPMs are dropping, algorithms are changing, and platform payouts keep getting worse every quarter.',
+      title: "Ad Revenue Is Declining",
+      description: "CPMs are dropping, algorithms are changing, and platform payouts keep getting worse every quarter.",
     },
     {
       icon: <DollarSign className="w-8 h-8" />,
-      title: 'No Clear Path to Monetization',
-      description: 'You know you should be making money but don't know HOW. Sponsorships? Affiliate? Coaching? It's overwhelming.',
+      title: "No Clear Path to Monetization",
+      description: "You know you should be making money but don't know HOW. Sponsorships? Affiliate? Coaching? It's overwhelming.",
     },
   ];
 

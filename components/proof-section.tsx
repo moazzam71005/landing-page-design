@@ -14,12 +14,12 @@ export default function ProofSection() {
       avatar: '🎥',
     },
     {
-      name: 'Marcus Rivera',
-      title: 'YouTube Creator',
-      followers: '180K subscribers',
-      quote: 'Best decision I made as a creator. My income is now independent from YouTube\'s algorithm.',
-      metrics: '$18K/month',
-      avatar: '▶️',
+      name: "Marcus Rivera",
+      title: "YouTube Creator",
+      followers: "180K subscribers",
+      quote: "Best decision I made as a creator. My income is now independent from YouTube's algorithm.",
+      metrics: "$18K/month",
+      avatar: "▶️",
     },
     {
       name: 'Jessica Park',
