@@ -55,9 +55,9 @@ export default function ProofSection() {
         {/* Stats grid */}
         <div className="grid md:grid-cols-4 gap-4 mb-16">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center p-6 rounded-xl bg-card dark:bg-[#1a1a2e] border border-border/30">
-              <p className="text-3xl md:text-4xl font-bold text-accent mb-2">{stat.metric}</p>
-              <p className="text-sm text-muted-foreground">{stat.label}</p>
+            <div key={index} className="text-center p-6 rounded-xl bg-card dark:bg-[#1a1a2e] border border-border/30 transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-1 cursor-pointer group">
+              <p className="text-3xl md:text-4xl font-bold text-accent mb-2 transition-transform group-hover:scale-110">{stat.metric}</p>
+              <p className="text-sm text-muted-foreground transition-colors group-hover:text-foreground">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -67,7 +67,7 @@ export default function ProofSection() {
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="p-8 border border-border/50 dark:bg-[#1a1a2e] dark:border-[#2a2a3e] hover:border-accent/30 transition-all"
+              className="p-8 border border-border/50 dark:bg-[#1a1a2e] dark:border-[#2a2a3e] hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 transform hover:-translate-y-1 group cursor-pointer"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-4">
@@ -77,7 +77,7 @@ export default function ProofSection() {
               </div>
 
               {/* Quote */}
-              <p className="text-foreground mb-6 leading-relaxed italic">"{testimonial.quote}"</p>
+              <p className="text-foreground mb-6 leading-relaxed italic transition-colors group-hover:text-accent/90">"{testimonial.quote}"</p>
 
               {/* Creator info */}
               <div className="flex items-start justify-between">

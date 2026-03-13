@@ -56,11 +56,11 @@ export default function ValueStackSection() {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="p-8 border border-border/50 dark:bg-[#0f0f1a] dark:border-[#2a2a3e] hover:border-accent/30 transition-all group hover:shadow-lg"
+              className="p-8 border border-border/50 dark:bg-[#0f0f1a] dark:border-[#2a2a3e] hover:border-accent/50 transition-all duration-300 group hover:shadow-lg hover:shadow-accent/20 transform hover:-translate-y-1 cursor-pointer"
             >
-              <div className="text-accent mb-4 group-hover:scale-110 transition-transform">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-foreground mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+              <div className="text-accent mb-4 group-hover:scale-125 transition-all duration-300 group-hover:rotate-12 inline-block">{feature.icon}</div>
+              <h3 className="text-xl font-bold text-foreground mb-3 transition-colors group-hover:text-accent">{feature.title}</h3>
+              <p className="text-muted-foreground leading-relaxed transition-colors group-hover:text-foreground/80">{feature.description}</p>
             </Card>
           ))}
         </div>

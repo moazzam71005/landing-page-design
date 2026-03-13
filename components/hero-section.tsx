@@ -21,7 +21,7 @@ export default function HeroSection() {
         {/* Main headline */}
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-foreground">
           Turn Your{' '}
-          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          <span className="text-accent">
             Audience Into Income
           </span>
         </h1>
@@ -33,14 +33,14 @@ export default function HeroSection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full px-8">
+          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full px-8 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-accent/40">
             Start For Free
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
           </Button>
           <Button
             variant="outline"
             size="lg"
-            className="rounded-full px-8 border-foreground/20 text-foreground hover:bg-foreground/5"
+            className="rounded-full px-8 border-foreground/20 text-foreground hover:bg-foreground/5 transition-all duration-300 hover:border-foreground/40 hover:shadow-lg hover:shadow-foreground/10"
           >
             <Play className="w-5 h-5 mr-2" />
             Watch Demo
@@ -55,13 +55,13 @@ export default function HeroSection() {
               {[1, 2, 3, 4].map((i) => (
                 <div
                   key={i}
-                  className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 border-2 border-background flex items-center justify-center text-xs font-bold text-white"
+                  className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 border-2 border-background flex items-center justify-center text-xs font-bold text-white transition-all duration-300 hover:scale-110 hover:z-10 cursor-pointer hover:shadow-lg hover:shadow-accent/40"
                 >
                   {i}
                 </div>
               ))}
             </div>
-            <span className="text-sm text-muted-foreground ml-2">Join thousands earning monthly</span>
+            <span className="text-sm text-muted-foreground ml-2 transition-colors hover:text-foreground cursor-pointer">Join thousands earning monthly</span>
           </div>
         </div>
       </div>

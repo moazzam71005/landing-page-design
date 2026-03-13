@@ -41,11 +41,11 @@ export default function ProblemSection() {
           {problems.map((problem, index) => (
             <Card
               key={index}
-              className="p-8 border border-border/50 hover:border-accent/30 transition-all duration-300 hover:shadow-lg dark:bg-[#1a1a2e] dark:border-[#2a2a3e]"
+              className="p-8 border border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 dark:bg-[#1a1a2e] dark:border-[#2a2a3e] dark:hover:bg-[#252540] transform hover:-translate-y-1 cursor-pointer group"
             >
-              <div className="text-accent mb-4">{problem.icon}</div>
-              <h3 className="text-xl font-bold text-foreground mb-3">{problem.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{problem.description}</p>
+              <div className="text-accent mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">{problem.icon}</div>
+              <h3 className="text-xl font-bold text-foreground mb-3 transition-colors group-hover:text-accent">{problem.title}</h3>
+              <p className="text-muted-foreground leading-relaxed transition-colors group-hover:text-foreground/80">{problem.description}</p>
             </Card>
           ))}
         </div>

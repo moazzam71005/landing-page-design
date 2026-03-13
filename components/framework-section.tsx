@@ -54,18 +54,18 @@ export default function FrameworkSection() {
         {/* Framework flow */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
-              <Card className="p-8 h-full border border-border/50 dark:bg-[#1a1a2e] dark:border-[#2a2a3e] hover:border-accent/30 transition-all">
-                <div className="text-5xl font-bold text-accent/20 mb-4">{step.number}</div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">{step.title}</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">{step.description}</p>
+            <div key={index} className="relative group">
+              <Card className="p-8 h-full border border-border/50 dark:bg-[#1a1a2e] dark:border-[#2a2a3e] hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 transform hover:-translate-y-1 cursor-pointer">
+                <div className="text-5xl font-bold text-accent/20 mb-4 transition-transform group-hover:scale-110">{step.number}</div>
+                <h3 className="text-2xl font-bold text-foreground mb-3 transition-colors group-hover:text-accent">{step.title}</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed transition-colors group-hover:text-foreground/80">{step.description}</p>
 
                 {/* Details list */}
                 <ul className="space-y-2">
                   {step.details.map((detail, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                      <span className="text-accent mt-1">✓</span>
-                      <span>{detail}</span>
+                    <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground transition-all group-hover:translate-x-1">
+                      <span className="text-accent mt-1 transition-transform group-hover:scale-125">✓</span>
+                      <span className="transition-colors group-hover:text-foreground/90">{detail}</span>
                     </li>
                   ))}
                 </ul>
@@ -73,9 +73,9 @@ export default function FrameworkSection() {
 
               {/* Arrow between steps */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute -right-3 top-1/2 transform -translate-y-1/2 z-10">
-                  <div className="bg-accent/20 rounded-full p-2">
-                    <ArrowRight className="w-5 h-5 text-accent" />
+                <div className="hidden md:block absolute -right-3 top-1/2 transform -translate-y-1/2 z-10 group-hover:scale-125 transition-transform duration-300">
+                  <div className="bg-accent/20 rounded-full p-2 group-hover:bg-accent/40 transition-colors">
+                    <ArrowRight className="w-5 h-5 text-accent group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </div>
               )}

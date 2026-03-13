@@ -75,11 +75,11 @@ export default function OfferSection() {
           {tiers.map((tier, index) => (
             <Card
               key={index}
-              className={`relative p-8 border transition-all ${
+              className={`relative p-8 border transition-all duration-300 ${
                 tier.highlighted
-                  ? 'border-accent/50 dark:border-accent/50 ring-2 ring-accent/30 scale-105 md:scale-100'
-                  : 'border-border/50 dark:border-[#2a2a3e]'
-              } dark:bg-[#1a1a2e] hover:border-accent/30`}
+                  ? 'border-accent/50 dark:border-accent/50 ring-2 ring-accent/30 md:scale-100'
+                  : 'border-border/50 dark:border-[#2a2a3e] hover:border-accent/50 hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-1'
+              } dark:bg-[#1a1a2e] group cursor-pointer`}
             >
               {tier.highlighted && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -100,10 +100,10 @@ export default function OfferSection() {
 
                 <Button
                   size="lg"
-                  className={`w-full rounded-lg ${
+                  className={`w-full rounded-lg transition-all duration-300 transform hover:scale-105 ${
                     tier.highlighted
-                      ? 'bg-accent hover:bg-accent/90 text-accent-foreground'
-                      : 'bg-muted text-foreground hover:bg-muted/80'
+                      ? 'bg-accent hover:bg-accent/90 text-accent-foreground hover:shadow-lg hover:shadow-accent/40'
+                      : 'bg-muted text-foreground hover:bg-muted/80 hover:shadow-lg hover:shadow-foreground/10'
                   }`}
                 >
                   Get Started
@@ -113,9 +113,9 @@ export default function OfferSection() {
               {/* Features list */}
               <div className="space-y-4">
                 {tier.features.map((feature, i) => (
-                  <div key={i} className="flex gap-3">
-                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground text-sm leading-relaxed">{feature}</span>
+                  <div key={i} className="flex gap-3 transition-all group-hover:translate-x-1">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5 transition-transform group-hover:scale-110" />
+                    <span className="text-foreground text-sm leading-relaxed transition-colors group-hover:text-accent/90">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -124,11 +124,11 @@ export default function OfferSection() {
         </div>
 
         {/* Money-back guarantee */}
-        <div className="bg-card dark:bg-[#1a1a2e] border border-border/50 dark:border-[#2a2a3e] rounded-xl p-8 text-center">
-          <p className="text-lg text-foreground mb-2">
+        <div className="bg-card dark:bg-[#1a1a2e] border border-border/50 dark:border-[#2a2a3e] rounded-xl p-8 text-center transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/20 cursor-pointer group">
+          <p className="text-lg text-foreground mb-2 transition-colors group-hover:text-accent">
             💰 <span className="font-semibold">30-Day Money-Back Guarantee</span>
           </p>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground transition-colors group-hover:text-foreground/80">
             Try CreatorPro risk-free. If you're not seeing progress within 30 days, we'll refund you completely. No questions asked.
           </p>
         </div>
@@ -137,21 +137,21 @@ export default function OfferSection() {
         <div className="mt-16 text-center">
           <p className="text-sm font-medium text-accent mb-6 uppercase tracking-wider">All Plans Include</p>
           <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="text-center">
-              <p className="text-2xl mb-2">📚</p>
-              <p className="text-sm text-foreground">Framework Access</p>
+            <div className="text-center transition-all duration-300 hover:-translate-y-2 cursor-pointer group">
+              <p className="text-2xl mb-2 transition-transform group-hover:scale-125 inline-block">📚</p>
+              <p className="text-sm text-foreground transition-colors group-hover:text-accent">Framework Access</p>
             </div>
-            <div className="text-center">
-              <p className="text-2xl mb-2">👥</p>
-              <p className="text-sm text-foreground">Creator Community</p>
+            <div className="text-center transition-all duration-300 hover:-translate-y-2 cursor-pointer group">
+              <p className="text-2xl mb-2 transition-transform group-hover:scale-125 inline-block">👥</p>
+              <p className="text-sm text-foreground transition-colors group-hover:text-accent">Creator Community</p>
             </div>
-            <div className="text-center">
-              <p className="text-2xl mb-2">🎁</p>
-              <p className="text-sm text-foreground">Monthly Updates</p>
+            <div className="text-center transition-all duration-300 hover:-translate-y-2 cursor-pointer group">
+              <p className="text-2xl mb-2 transition-transform group-hover:scale-125 inline-block">🎁</p>
+              <p className="text-sm text-foreground transition-colors group-hover:text-accent">Monthly Updates</p>
             </div>
-            <div className="text-center">
-              <p className="text-2xl mb-2">🔄</p>
-              <p className="text-sm text-foreground">Lifetime Updates</p>
+            <div className="text-center transition-all duration-300 hover:-translate-y-2 cursor-pointer group">
+              <p className="text-2xl mb-2 transition-transform group-hover:scale-125 inline-block">🔄</p>
+              <p className="text-sm text-foreground transition-colors group-hover:text-accent">Lifetime Updates</p>
             </div>
           </div>
         </div>

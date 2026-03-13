@@ -65,16 +65,20 @@ export default function FAQSection() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-border/50 rounded-lg overflow-hidden dark:bg-[#1a1a2e] dark:border-[#2a2a3e] hover:border-accent/30 transition-all"
+              className={`border rounded-lg overflow-hidden transition-all duration-300 cursor-pointer group ${
+                openIndex === index
+                  ? 'border-accent/50 dark:border-accent/50 bg-accent/5 dark:bg-accent/5 shadow-lg shadow-accent/20'
+                  : 'border-border/50 dark:border-[#2a2a3e] hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10'
+              } dark:bg-[#1a1a2e]`}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-4 flex items-center justify-between hover:bg-muted/30 dark:hover:bg-accent/5 transition-colors"
+                className="w-full px-6 py-4 flex items-center justify-between hover:bg-muted/30 dark:hover:bg-accent/5 transition-all"
               >
-                <span className="text-lg font-semibold text-foreground text-left">{faq.question}</span>
+                <span className="text-lg font-semibold text-foreground text-left transition-colors group-hover:text-accent/90">{faq.question}</span>
                 <ChevronDown
-                  className={`w-5 h-5 text-accent flex-shrink-0 transition-transform ${
-                    openIndex === index ? 'rotate-180' : ''
+                  className={`w-5 h-5 text-accent flex-shrink-0 transition-all duration-300 ${
+                    openIndex === index ? 'rotate-180 scale-125' : 'group-hover:scale-110'
                   }`}
                 />
               </button>
