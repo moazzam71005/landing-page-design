@@ -10,6 +10,26 @@ export default function FinalCTASection() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-b from-blue-400/10 to-transparent rounded-full blur-3xl opacity-20"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-t from-purple-400/10 to-transparent rounded-full blur-3xl opacity-20"></div>
+        
+        {/* Animated wave background */}
+        <svg
+          className="absolute bottom-0 left-0 w-full h-64 opacity-10"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="ctaWave" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#a855f7', stopOpacity: 0.8 }} />
+              <stop offset="100%" style={{ stopColor: '#6d28d9', stopOpacity: 0.2 }} />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,50 Q300,25 600,50 T1200,50 L1200,120 L0,120 Z"
+            fill="url(#ctaWave)"
+            className="animate-wave"
+            style={{ animationDelay: '2s' }}
+          />
+        </svg>
       </div>
 
       <div className="relative max-w-4xl mx-auto text-center">

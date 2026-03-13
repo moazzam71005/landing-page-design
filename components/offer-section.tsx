@@ -57,8 +57,29 @@ export default function OfferSection() {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-8 dark:bg-gradient-to-b dark:from-[#1a1a2e] dark:to-[#0f0f1a]">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative py-20 px-4 md:px-8 dark:bg-gradient-to-b dark:from-[#1a1a2e] dark:to-[#0f0f1a] overflow-hidden">
+      {/* Animated wave background */}
+      <div className="absolute inset-0 pointer-events-none opacity-10">
+        <svg
+          className="absolute bottom-0 left-0 w-full h-64"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="offerWave" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#a855f7', stopOpacity: 0.6 }} />
+              <stop offset="100%" style={{ stopColor: '#6d28d9', stopOpacity: 0.1 }} />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,50 Q300,25 600,50 T1200,50 L1200,120 L0,120 Z"
+            fill="url(#offerWave)"
+            className="animate-wave"
+            style={{ animationDelay: '1s' }}
+          />
+        </svg>
+      </div>
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
           <p className="text-sm md:text-base font-medium text-accent mb-4 uppercase tracking-wider">Simple Pricing</p>
