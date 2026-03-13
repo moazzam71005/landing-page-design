@@ -10,6 +10,45 @@ export default function HeroSection() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-b from-blue-400/20 to-transparent rounded-full blur-3xl opacity-30"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-t from-purple-400/20 to-transparent rounded-full blur-3xl opacity-30"></div>
+        
+        {/* Animated wave background */}
+        <svg
+          className="absolute bottom-0 left-0 w-full h-96 opacity-20"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#a855f7', stopOpacity: 0.8 }} />
+              <stop offset="100%" style={{ stopColor: '#6d28d9', stopOpacity: 0.2 }} />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,50 Q300,25 600,50 T1200,50 L1200,120 L0,120 Z"
+            fill="url(#waveGradient)"
+            className="animate-wave"
+          />
+        </svg>
+        
+        {/* Secondary floating wave */}
+        <svg
+          className="absolute bottom-10 left-0 w-full h-80 opacity-15"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#c084fc', stopOpacity: 0.6 }} />
+              <stop offset="100%" style={{ stopColor: '#a855f7', stopOpacity: 0.1 }} />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,60 Q300,35 600,60 T1200,60 L1200,120 L0,120 Z"
+            fill="url(#waveGradient2)"
+            className="animate-float"
+            style={{ animationDelay: '1s' }}
+          />
+        </svg>
       </div>
 
       <div className="relative max-w-4xl mx-auto text-center">
